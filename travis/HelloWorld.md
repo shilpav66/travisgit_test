@@ -1,4 +1,4 @@
-"Hello World" with Travis CI
+"Hello World test" with Travis CI
 ============================
 
 Here, we will set up a first Travis CI job, based around a simple "hello world" example, to get you up and running with Travis CI.
@@ -15,7 +15,7 @@ In the following text, replace `USERNAME` with your GitHub user name.
 Create a new repository on GitHub
 ---------------------------------
 
-Visit https://github.com/USERNAME. 
+Visit https://github.com/USERNAME.
 
 Click **Repositories** tab.
 
@@ -98,7 +98,7 @@ python:
 
   - "2.7"
 
-script: 
+script:
 
   - python hello.py
 ```
@@ -181,7 +181,7 @@ Visit https://github.com/USERNAME/travis-lab and look for your icon in your `REA
 Explore a "real world" example
 ------------------------------
 
-https://github.com/softwaresaved/recipy is a fork of recipy, https://github.com/recipy/recipy, a framework for logging provenance about the environments under which Python scripts for research are run. 
+https://github.com/softwaresaved/recipy is a fork of recipy, https://github.com/recipy/recipy, a framework for logging provenance about the environments under which Python scripts for research are run.
 
 Look at its Travis CI icon at the bottom of its `README.md` file.
 
@@ -200,4 +200,3 @@ Change your code
 Make changes to your `hello.py` Python script then commit your changes and push them to GitHub. Watch how Travis CI regularly triggers new jobs.
 
 Create a Python file with some functions, and an associated test file with some unit tests. Update the `script` section of `.travis.yml` to run the tests using py.test.
-
