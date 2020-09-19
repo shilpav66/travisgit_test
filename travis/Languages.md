@@ -1,11 +1,11 @@
-Create a Travis CI job for popular programming languages
+Create a Travis CI job for popular programming languages test
 ========================================================
 
 Travis CI can build and run code written in many languages, including C, C++, Fortran, Java, PHP and Python, either directly or via automated build tools like Make or ANT. It can also run unit tests, for example written for CUnit, CppUnit, googletest, JUnit, PHPUnit or pytest, and report on the success or failure of tests. For example, Travis CI provides out-of-the-box support for:
 
 * C: gcc, clang, autotools, make.
 * C++: gcc, clang, autotools, make.
-* Java: versions of Oracle JDK and OpenJDK, ANT, Maven, Gradle. 
+* Java: versions of Oracle JDK and OpenJDK, ANT, Maven, Gradle.
 * PHP: versions of PHP, PHPUnit,  XDebug.
 * Python: versions of Python 2 and 3, pytest and mock test libraries.
 * and many other [languages](http://docs.travis-ci.com/user/languages/).
@@ -112,7 +112,7 @@ We download, build and install googletest, then change into our `cpp` directory:
 ```
 before_install:
   - wget https://googletest.googlecode.com/files/gtest-1.7.0.zip
-  - unzip gtest-1.7.0.zip 
+  - unzip gtest-1.7.0.zip
   - cd gtest-1.7.0/
   - ./configure --prefix=$TRAVIS_BUILD_DIR --with-pthreads=no
   - make
@@ -212,7 +212,7 @@ If there is no `script` entry then Travis CI will execute:
 ```
 phpunit
 ```
-  
+
 However, to run our PHP tests we need to provide a bootstrap value, so we need to provide a `script` section with the PHPUnit command we want to run:
 
 ```
@@ -227,7 +227,7 @@ We use PHPUnit's `--debug` and `--coverage-text` flags to print out information 
 Python needs a `script` entry to specify how to run any tests:
 
 ```
-script: 
+script:
   - py.test -v --cov=maths
 ```
 
@@ -336,7 +336,7 @@ test:
     [junit] Testsuite: math.FibonacciTest
     [junit] Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.11 sec
     [junit] Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.11 sec
-    [junit] 
+    [junit]
     [junit] Testcase: testFib3 took 0.007 sec
     [junit] Testcase: testFib30 took 0.007 sec
     [junit] Testcase: testFibMinusOne took 0 sec
@@ -367,7 +367,7 @@ Time: 1.42 minutes, Memory: 10.00Mb
 OK (5 tests, 5 assertions)
 Code Coverage Report:     
   2015-10-01 11:23:36     
-                          
+
  Summary:                 
   Classes: 100.00% (1/1)  
   Methods: 100.00% (1/1)  
@@ -385,7 +385,7 @@ $ py.test -v --cov=maths
 ============================= test session starts ==============================
 platform linux2 -- Python 2.7.9 -- py-1.4.26 -- pytest-2.6.4 -- /home/travis/virtualenv/python2.7.9/bin/python
 plugins: cov
-collected 5 items 
+collected 5 items
 
 maths/tests/test_fibonacci.py::TestFibonacci::test_fibonacci0 PASSED
 maths/tests/test_fibonacci.py::TestFibonacci::test_fibonacci1 PASSED
@@ -419,4 +419,3 @@ For more information on Travis CI's support for the languages above, see the Tra
 * [Java](http://docs.travis-ci.com/user/languages/java/)
 * [PHP](http://docs.travis-ci.com/user/languages/php/)
 * [Python](http://docs.travis-ci.com/user/languages/python/)
-

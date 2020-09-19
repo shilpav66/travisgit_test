@@ -1,4 +1,5 @@
 language: python
+tests
 
 python:
   - "2.7"
@@ -8,5 +9,5 @@ before_install:
   - pip install pytest-cov
   - cd python
 
-script: 
+script:
   - py.test -v --cov=maths
